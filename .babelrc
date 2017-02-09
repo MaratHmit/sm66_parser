@@ -1,0 +1,4 @@
+{
+	"presets": ["es2015-riot", "stage-0"],
+	"plugins": ["transform-runtime", "transform-es3-property-literals"]
+}

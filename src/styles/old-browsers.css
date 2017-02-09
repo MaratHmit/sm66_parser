@@ -1,0 +1,39 @@
+.old-browser {
+    width: 360px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 5px 15px;
+    border-radius: 4px;
+    margin-top: 30px;
+}
+
+.old-browser__content, .old-browser__browsers{
+    text-align: center;
+}
+
+.old-browser__browsers {
+    display: inline-block;
+}
+
+.old-browser__browser-link {
+    float: left;
+    width: 109px;
+    height: 20px;
+    padding: 106px 0 13px 0;
+    border-radius: 4px;
+    color: #2B587A;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.old-browser__browsers .firefox {
+    background: url(../images/browsers/firefox.png) no-repeat 50% 17px;
+}
+
+.old-browser__browsers .chrome {
+    background: url(../images/browsers/chrome.png) no-repeat 50% 17px;
+}
+
+.old-browser__browsers .opera {
+    background: url(../images/browsers/opera.png) no-repeat 50% 15px;
+}

@@ -1,0 +1,15 @@
+include blocks/old-browser
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		title Shop24
+	body
+		| <!--[if lte IE 9]>
+		+oldBrowser
+		| <![endif]-->
+		app
+		script(type='text/javascript', src='vendor/ckeditor/ckeditor.js')
+		script(type='text/javascript', src='bundle.js')
