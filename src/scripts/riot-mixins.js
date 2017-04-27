@@ -1,6 +1,6 @@
 var changeMixin = {
     change(e) {
-        if (!e.target && !e.target.name) return
+        if (!e.target || !e.target.name) return
 
         if (typeof this.beforeChange === 'function')
             this.beforeChange(e)

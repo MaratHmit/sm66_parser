@@ -23,6 +23,13 @@ import
             .col-md-1: .form-group
                 label.control-label Оптовая цена
                 input.form-control(name='wholesalePrice', type='number', value='{ item.wholesalePrice }')
+        .row(if='{ enableImport }')
+            .col-md-3: .form-group
+                label.control-label.label-warning Обновлять цены акционных товаров
+            .col-md-1
+                .checkbox-inline
+                    label
+                        input(type='checkbox', name='updatePrices', checked='{ (item.updatePrices) }')
         .row
             .col-md-3: .form-group
                 button.btn.btn-primary(onclick='{ loadFile }', type='button', disabled='{ !enableImport }') Импорт
@@ -89,9 +96,10 @@ import
         var self = this
 
         self.item = {
-            retailPrice: 30,
-            corporatePrice: 20,
+            retailPrice: 100,
+            corporatePrice: 50,
             wholesalePrice: 10,
+            updatePrices: false
         }
 
         self.mixin('change')
@@ -116,6 +124,7 @@ import
             formData.append('retailPrice', self.item.retailPrice)
             formData.append('corporatePrice', self.item.corporatePrice)
             formData.append('wholesalePrice', self.item.wholesalePrice)
+            formData.append('updatePrices', self.item.updatePrices)
             self.loader = true
             self.error = false
             self.update()

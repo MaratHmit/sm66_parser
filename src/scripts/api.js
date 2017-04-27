@@ -1,6 +1,6 @@
 var API = {
     version: process.env.NODE_ENV === 'development' ? 'Shop' : 'Shop',
-    url: 'http://sm66.e-stile.ru/api/',
+    url: 'https://66sm.ru/api/',
     complete(params) {
         if (!('notFoundRedirect' in params))
             params.notFoundRedirect = true
